@@ -1,19 +1,19 @@
 {
-  "name": "caffeine-theme",
+  "name": "meetqy-themes",
   "description": "Material Design Inspired theme for Ghost",
-  "homepage": "https://github.com/kelyvin/caffeine-theme",
+  "homepage": "https://github.com/meetqy/meetqy-themes",
   "version": "3.0.5",
   "author": {
-    "name": "Kelyvin",
-    "email": "kelyvin@caffeinecoding.com",
-    "url": "https://github.com/kelyvin"
+    "name": "meetqy",
+    "email": "meetqy@qq.com",
+    "url": "https://github.com/meetqy"
   },
   "config": {
     "posts_per_page": 6
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/kelyvin/caffeine-theme"
+    "url": "https://github.com/meetqy/meetqy-themes"
   },
   "scripts": {
     "start": "npm install && gulp",
@@ -21,7 +21,7 @@
     "postinstall": "bower install"
   },
   "bugs": {
-    "url": "https://github.com/kelyvin/caffeine-theme/issues"
+    "url": "https://github.com/meetqy/meetqy-themes/issues"
   },
   "keywords": [
     "elegant",
