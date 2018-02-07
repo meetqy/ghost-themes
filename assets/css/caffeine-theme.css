@@ -381,7 +381,6 @@ h6 {
 p {
     margin-bottom: 20px;
     line-height: 26px;
-    font-size: 90%
 }
 
 p > code {
@@ -5201,13 +5200,29 @@ pre[class*=language-] {
 }
 
 :not(pre) > code[class*=language-], pre[class*=language-] {
-    background: #272822
+    background: rgba(39,40,34,1);
 }
 
 :not(pre) > code[class*=language-] {
     padding: .1em;
     border-radius: .3em
 }
+
+code[class*=language-] ul{
+    padding-left: 20px;
+    margin: 0!important;
+}
+
+code[class*=language-]  li{
+    list-style: decimal!important;
+    padding: 0 5px!important;
+    margin: 0!important;
+    color: #fff;
+}
+
+/*code[class*=language-]  li:nth-child(2n-1){*/
+    /*background: #f6f6f6;*/
+/*}*/
 
 .token.cdata, .token.comment, .token.doctype, .token.prolog {
     color: #708090

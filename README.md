@@ -13,7 +13,7 @@
 │   │   │   ├── cover.js
 │   │   │   ├── main.js
 │   │   │   └── search.js
-│   │   └── caffeine-theme.js //production js
+│   │   └── caffeine-theme.min.js //production js
 │   └── scss //all the sass stylsheets that will be bundled together
 │   │   ├── components //stylesheets for specific components
 │   │   │   ├── _aside.scss
