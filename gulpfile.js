@@ -16,16 +16,10 @@ gulp.task('css',['clear_css'],function () {
        .pipe(gulp.dest('./assets/css/'));
 });
 
-gulp.task('watch',function () {
-    var min_css = gulp.watch('assets/css/*', ['css']);
-    livereload.listen();//开启监听
-    gulp.watch(['min_css', 'min_js']).on('change', livereload.changed);
-});
-
 gulp.task('clear_css', function(cb) {
     return del(["assets/css/*.min.css"], cb)
 });
 
 gulp.task('default',function() {
-    gulp.start('css', 'watch');
+    gulp.start('css');
 });

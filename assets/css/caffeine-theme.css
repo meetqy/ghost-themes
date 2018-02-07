@@ -401,9 +401,15 @@ strong {
 }
 
 blockquote > p {
-    margin: 40px 48px;
+    /*margin: 40px 48px;*/
     font-family: freight-text-pro, Georgia, Cambria, "Times New Roman", Times, serif;
-    font-size: 18px
+    font-size: 18px;
+    text-align: left;
+    font-style: normal;
+    padding: 0 15px;
+    color: #777;
+    border-left: 4px solid #ddd;
+    margin-top: 35px;
 }
 
 li > code, pre {
@@ -4552,9 +4558,9 @@ body.page-browser-compatibility .error-body {
 }
 
 .post .author-credit {
-    border-top: 2px solid #56817A;
+    border-top: 1px dashed #56817A;
     padding: 30px 0 20px 10px;
-    margin-top: 40px
+    /*margin-top: 40px*/
 }
 
 .post .author-credit h4, .post .author-credit p {
@@ -4921,7 +4927,7 @@ body.page-browser-compatibility .error-body {
     }
 
     blockquote > p {
-        margin: 32px 10px
+        /*margin: 32px 10px*/
     }
 }
 
@@ -5188,7 +5194,7 @@ code[class*=language-], pre[class*=language-] {
 }
 
 pre[class*=language-] {
-    padding: 1em;
+    /*padding: 1em;*/
     margin: .5em 0;
     overflow: auto;
     border-radius: .3em

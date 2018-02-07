@@ -1,0 +1,12 @@
+{
+  "name": "ghostHunter",
+  "homepage": "https://github.com/i11ume/ghostHunter",
+  "_release": "2e72162086",
+  "_resolution": {
+    "type": "commit",
+    "commit": "2e721620868d127e9e688145fabcf5f86249d11b"
+  },
+  "_source": "git://github.com/i11ume/ghostHunter.git",
+  "_target": "2e721620868d127e9e688145fabcf5f86249d11b",
+  "_originalSource": "git://github.com/i11ume/ghostHunter.git"
+}
