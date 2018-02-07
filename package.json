@@ -1,0 +1,48 @@
+{
+  "name": "caffeine-theme",
+  "description": "Material Design Inspired theme for Ghost",
+  "homepage": "https://github.com/kelyvin/caffeine-theme",
+  "version": "3.0.5",
+  "author": {
+    "name": "Kelyvin",
+    "email": "kelyvin@caffeinecoding.com",
+    "url": "https://github.com/kelyvin"
+  },
+  "config": {
+    "posts_per_page": 6
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kelyvin/caffeine-theme"
+  },
+  "scripts": {
+    "start": "npm install && gulp",
+    "test": "gulp build",
+    "postinstall": "bower install"
+  },
+  "bugs": {
+    "url": "https://github.com/kelyvin/caffeine-theme/issues"
+  },
+  "keywords": [
+    "elegant",
+    "ghost",
+    "minimal",
+    "theme",
+    "blog",
+    "caffeine",
+    "material",
+    "design",
+    "ghost.org"
+  ],
+  "engines": {
+    "node": "^4.2.0 || ^6.10.0"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^3.9.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-livereload": "^3.8.1"
+  }
+}

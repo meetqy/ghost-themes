@@ -1,0 +1,35 @@
+{{!< default}}
+
+{{#post}}
+
+  <article class="{{post_class}}">
+    {{> material-cover}}
+    <div class="post-card animated fade-in">
+        <a id="back-button" href="#open" title="Go back" class="hvr-grow">
+            <div class="back-button">
+                <i class="fa fa-arrow-left"></i>
+            </div>
+        </a>
+        <div class="post-container">
+            <div class="post-header">
+                <div class="meta">
+                    <time datetime="{{date published_at format="YYYY-MM-DD"}}">{{date published_at format="YYYY-MM-DD"}}</time>
+                    <span class="tags">{{tags prefix="in " separator=" "}}</span>
+                    <span class="reading-time"> ~ <span></span> read.</span>
+                </div>
+                <h1 id="post-title">
+                    {{{title}}}
+                </h1>
+                <div class="share">
+                    {{> share }}
+                </div>
+            </div>
+             <div class="post-content">
+                {{content}}
+            </div>
+            {{> post-author-credit}}
+        </div>
+    </div>
+  </article>
+
+{{/post}}

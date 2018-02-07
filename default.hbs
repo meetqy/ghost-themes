@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--[if lte IE 9]>
+        <script type="text/javascript">
+            window.location = "/browser-compatibility";
+        </script>
+        <![endif]-->
+        <title>{{meta_title}}</title>
+        {{ghost_head}}
+        {{> meta}}
+        <link rel="stylesheet" type="text/css" href="{{asset "css/caffeine-theme.min.css"}}" />
+        {{> head-css}}
+        {{> headscript}}
+    </head>
+    <body class="{{body_class}}">
+        {{> header}}
+        {{> aside}}
+        <main class="animated">
+            <section class="content">
+                {{{body}}}
+                {{> footer}}
+            </section>
+        </main>
+        {{> tags-overlay}}
+        {{ghost_foot}}
+        <script src="{{asset "js/jquery.min.js"}}"></script>
+        <script src="{{asset "js/caffeine-theme.js"}}" type="text/javascript" charset="utf-8"></script>
+        {{> google-analytics}}
+        {{> disqus-comment-count}}
+    </body>
+</html>
