@@ -4717,7 +4717,7 @@ body.page-browser-compatibility .error-body {
 
 @media all and (max-width: 1024px) {
 
-    .module-cmt-float-bar{display: none!important;}
+    /*.module-cmt-float-bar{display: none!important;}*/
 
     code[class*=language-] ul{
         padding-left: 36px!important;
