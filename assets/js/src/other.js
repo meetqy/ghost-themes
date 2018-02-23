@@ -14,10 +14,14 @@ window.onload = function () {
     var winHeight = $(window).height();
     if(navigator.userAgent.match(/mobile/i) && $('.module-cmt-float-bar')) {
         var cyComment = $('.module-cmt-float-bar');
+        var cyCommentT = setInterval(function () {
+            if(cyComment)  return clearInterval(cyCommentT);
+            cyComment = $('.module-cmt-float-bar');
+        }, 500);
         var cyFixedHeight = cyComment.height();
-        cyComment.css('top',$(window).scrollTop() + winHeight - cyFixedHeight);
+        cyComment.css('top', $(window).scrollTop() + winHeight - cyFixedHeight);
         $(window).scroll(function () {
-            cyComment.css('top',$(window).scrollTop() + winHeight - cyFixedHeight);
+            cyComment.css('top', $(window).scrollTop() + winHeight - cyFixedHeight);
         })
     }
 };
