@@ -12,10 +12,11 @@ window.onload = function () {
 
     // 解决移动端fixed bug
     var winHeight = $(window).height();
-    if(navigator.userAgent.match(/mobile/i) && $('.module-cmt-float-bar')) {
+    if(navigator.userAgent.match(/mobile/i)) {
         var cyComment = $('.module-cmt-float-bar');
         var cyCommentT = setInterval(function () {
-            if(cyComment)  return clearInterval(cyCommentT);
+	   
+            if(cyComment[0])  return clearInterval(cyCommentT);
             cyComment = $('.module-cmt-float-bar');
         }, 500);
         var cyFixedHeight = cyComment.height();
