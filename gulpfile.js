@@ -18,7 +18,7 @@ gulp.task('css',['clear_css'],function () {
 
 var js = 'assets/js/src';
 gulp.task('js',['clear_js'],function () {
-   gulp.src(['assets/js/caffeine-theme.js',js+'/add-code-num.js'])
+   gulp.src(['assets/js/caffeine-theme.js',js+'/other.js'])
        .pipe(concat('caffeine-theme.min.js'))
        .pipe(uglify())
        .pipe(gulp.dest('assets/js/'))
