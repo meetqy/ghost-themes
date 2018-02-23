@@ -15,15 +15,16 @@ window.onload = function () {
     if(navigator.userAgent.match(/mobile/i)) {
         var cyComment = $('.module-cmt-float-bar');
         var cyCommentT = setInterval(function () {
-	   
-            if(cyComment[0])  return clearInterval(cyCommentT);
             cyComment = $('.module-cmt-float-bar');
+            if(cyComment[0]){
+                var cyFixedHeight = cyComment.height();
+                cyComment.css('top', $(window).scrollTop() + winHeight - cyFixedHeight);
+                $(window).scroll(function () {
+                    cyComment.css('top', $(window).scrollTop() + winHeight - cyFixedHeight);
+                });
+                return clearInterval(cyCommentT);
+            }
         }, 500);
-        var cyFixedHeight = cyComment.height();
-        cyComment.css('top', $(window).scrollTop() + winHeight - cyFixedHeight);
-        $(window).scroll(function () {
-            cyComment.css('top', $(window).scrollTop() + winHeight - cyFixedHeight);
-        })
     }
 };
 
