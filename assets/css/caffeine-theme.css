@@ -4717,7 +4717,7 @@ body.page-browser-compatibility .error-body {
 
 @media all and (max-width: 1024px) {
     code[class*=language-] ul{
-        padding-left: 36px;
+        padding-left: 36px!important;
     }
     .post {
         margin: 0
