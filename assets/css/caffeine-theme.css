@@ -5270,3 +5270,7 @@ code[class*=language-]  li{
 .token.entity {
     cursor: help
 }
+
+.close-w{display: none}
+.module-cmt-float-bar{opacity: .1}
+.module-cmt-float-bar:hover{opacity: 1}
