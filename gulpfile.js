@@ -40,21 +40,6 @@ src = {
             "assets/js/src/cover.js",
             "assets/js/src/search.js"
         ],
-        vendor: [
-            "assets/js/src/libs/subbscribe.js",
-            "assets/vendor/ghostHunter/jquery.ghostHunter.min.js",
-            "assets/vendor/fitvids/jquery.fitvids.js",
-            "assets/vendor/reading-time/build/readingTime.min.js",
-            "assets/vendor/prism/prism.js",
-            "assets/vendor/toastr/toastr.min.js",
-            "assets/vendor/store-js/store.min.js"
-        ]
-    },
-    fonts: {
-        files: [
-            "assets/vendor/font-awesome/fonts/**.*"
-        ],
-        dest: "assets/fonts"
     }
 };
 
@@ -73,7 +58,7 @@ gulp.task('css',function () {
 });
 
 gulp.task("js", function() {
-    gulp.src(src.js.fonts).pipe(addsrc(src.js.main)).pipe(changed(dist.js)).pipe(addsrc(src.js.vendor)).pipe(concat("" + dist.name + ".js")).pipe(uglify({
+    gulp.src(src.js.fonts).pipe(addsrc(src.js.main)).pipe(changed(dist.js)).pipe(concat("" + dist.name + ".js")).pipe(uglify({
         mangle: false
     })).pipe(header(banner, {
         pkg: pkg
@@ -96,5 +81,4 @@ gulp.task("default", function() {
     gulp.watch('/assets/css/caffeine-theme.css', ["css"]);
     gulp.watch(src.js.main, ["js"]);
     gulp.watch(src.js.fonts, ["js"]);
-    return gulp.watch(src.js.vendor, ["js"]);
 });
