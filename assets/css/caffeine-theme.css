@@ -4716,6 +4716,12 @@ body.page-browser-compatibility .error-body {
 }
 
 @media all and (max-width: 1024px) {
+
+    /*.module-cmt-float-bar{display: none!important;}*/
+
+    code[class*=language-] ul{
+        padding-left: 36px!important;
+    }
     .post {
         margin: 0
     }
@@ -5207,6 +5213,18 @@ pre[class*=language-] {
 :not(pre) > code[class*=language-] {
     padding: .1em;
     border-radius: .3em
+}
+code[class*=language-] ul{
+    padding-left: 20px;
+    margin: 0!important;
+}
+
+code[class*=language-]  li{
+    list-style: decimal!important;
+    padding: 0 5px!important;
+    margin: 0!important;
+    color: #fff;
+    font-size: 16px;
 }
 
 /*code[class*=language-]  li:nth-child(2n-1){*/
