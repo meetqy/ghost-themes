@@ -19,7 +19,7 @@ $(function() {
         zeroResultsInfo: false,
         onKeyUp: true,
         displaySearchInfo: true,
-        result_template: "<a class=\"result\" href='{{link}}'>\n  <h2>{{title}}</h2>\n  <h4>{{date published_at format=\"YYYY-MM-DD\"}}</h4>\n</a>",
+        result_template: "<a class=\"result\" href='{{link}}'>\n  <h2>{{title}}</h2>\n  <h4><time datetime=\"{{date published_at format=\"YYYY-MM-DD\"}}\">{{date published_at format=\"YYYY-MM-DD\"}}</time></h4>\n</a>",
         onComplete: function(query) {
             if (query.length > 0) {
                 return hideTags();
