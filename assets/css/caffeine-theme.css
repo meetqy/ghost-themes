@@ -5208,19 +5208,6 @@ pre[class*=language-] {
     border-radius: .3em
 }
 
-code[class*=language-] ul{
-    padding-left: 20px;
-    margin: 0!important;
-}
-
-code[class*=language-]  li{
-    list-style: decimal!important;
-    padding: 0 5px!important;
-    margin: 0!important;
-    color: #fff;
-    font-size: 16px;
-}
-
 /*code[class*=language-]  li:nth-child(2n-1){*/
     /*background: #f6f6f6;*/
 /*}*/
