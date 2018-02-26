@@ -1,5 +1,5 @@
 {
-	"name": "Caffeine Coding",
+	"name": "meetqy blog",
 	"icons": [
 		{
 			"src": "\/assets\/img\/icons\/android\/android-chrome-36x36.png?v=gAAmLMYXpw",
@@ -38,6 +38,6 @@
 			"density": 4
 		}
 	],
-	"start_url": "https:\/\/www.caffeinecoding.com",
+	"start_url": "https:\/\/meetqy.cn",
 	"display": "standalone"
 }
