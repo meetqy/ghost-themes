@@ -1,5 +1,5 @@
 // 代码显示行数
-window.onload = function () {
+// window.onload = function () {
     // var all_code = $("pre code");
     // if (all_code.length > 0) {
     //     for (var i = 0, len = all_code.length; i < len; i++) {
@@ -9,5 +9,5 @@ window.onload = function () {
     //         $(code).html(d);
     //     }
     // }
-};
+// };
 
