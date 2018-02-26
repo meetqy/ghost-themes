@@ -1,37 +1,100 @@
-var gulp = require("gulp"),
-    cssmin = require("gulp-clean-css"),
-    concat = require('gulp-concat'),
-    uglify = require('gulp-uglify'),
-    del = require('del');
+"use strict";
+var PORT, _s, addsrc, banner, browserSync, changed, concat, cssmin, dist, gulp, gutil, header, pkg, prefix, reload, sass, src, strip, uglify;
 
-gulp.task('css',['clear_css'],function () {
-   gulp.src('assets/css/*.css')
-       .pipe(concat('caffeine-theme.min.css'))
-       .pipe(cssmin({
-           advanced: true,//类型：Boolean 默认：true [是否开启高级优化（合并选择器等）]
-           compatibility: 'ie7',//保留ie7及以下兼容写法 类型：String 默认：''or'*' [启用兼容模式； 'ie7'：IE7兼容模式，'ie8'：IE8兼容模式，'*'：IE9+兼容模式]
-           keepBreaks: true,//类型：Boolean 默认：false [是否保留换行]
-           keepSpecialComments: '*'
-       }))
-       .pipe(gulp.dest('./assets/css/'));
+gulp = require("gulp");
+gutil = require("gulp-util");
+sass = require("gulp-sass");
+concat = require("gulp-concat");
+header = require("gulp-header");
+uglify = require("gulp-uglify");
+cssmin = require("gulp-cssmin");
+addsrc = require("gulp-add-src");
+changed = require("gulp-changed");
+pkg = require("./package.json");
+_s = require("underscore.string");
+prefix = require("gulp-autoprefixer");
+strip = require("gulp-strip-css-comments");
+browserSync = require("browser-sync");
+reload = browserSync.reload;
+
+PORT = {
+    GHOST: 2368,
+    BROWSERSYNC: 3000
+};
+
+dist = {
+    name: 'caffeine-theme.min',
+    css: "assets/css",
+    js: "assets/js"
+};
+
+src = {
+    js: {
+        fonts: [
+            "assets/vendor/fontfaceobserver/fontfaceobserver.js",
+            "assets/js/src/fonts.js"
+        ],
+        main: [
+            "assets/js/src/__init.js",
+            "assets/js/src/main.js",
+            "assets/js/src/cover.js",
+            "assets/js/src/search.js"
+        ],
+        vendor: [
+            "assets/js/src/libs/subbscribe.js",
+            "assets/vendor/ghostHunter/jquery.ghostHunter.min.js",
+            "assets/vendor/fitvids/jquery.fitvids.js",
+            "assets/vendor/reading-time/build/readingTime.min.js",
+            "assets/vendor/prism/prism.js",
+            "assets/vendor/toastr/toastr.min.js",
+            "assets/vendor/store-js/store.min.js"
+        ]
+    },
+    fonts: {
+        files: [
+            "assets/vendor/font-awesome/fonts/**.*"
+        ],
+        dest: "assets/fonts"
+    }
+};
+
+banner = ["/**", " * <%= pkg.name %> - <%= pkg.description %>", " * @version <%= pkg.version %>", " * @link    <%= pkg.homepage %>", " * @author  <%= pkg.author.name %> (<%= pkg.author.url %>)", " * @license <%= pkg.license %>", " */", ""].join("\n");
+
+gulp.task("fonts", function() {
+    gulp.src(src.fonts.files)
+        .pipe(gulp.dest(src.fonts.dest));
 });
 
-var js = 'assets/js/src';
-gulp.task('js',['clear_js'],function () {
-   gulp.src(['assets/js/caffeine-theme.js',js+'/other.js'])
-       .pipe(concat('caffeine-theme.min.js'))
-       .pipe(uglify())
-       .pipe(gulp.dest('assets/js/'))
+gulp.task('css',function () {
+    gulp.src('assets/css/caffeine-theme.css')
+        .pipe(concat("" + dist.name + ".css"))
+        .pipe(cssmin())
+        .pipe(gulp.dest('./assets/css/'));
 });
 
-gulp.task('clear_css', function(cb) {
-    return del(["assets/css/caffeine-theme.min.css"], cb)
+gulp.task("js", function() {
+    gulp.src(src.js.fonts).pipe(addsrc(src.js.main)).pipe(changed(dist.js)).pipe(addsrc(src.js.vendor)).pipe(concat("" + dist.name + ".js")).pipe(uglify({
+        mangle: false
+    })).pipe(header(banner, {
+        pkg: pkg
+    })).pipe(gulp.dest(dist.js));
 });
 
-gulp.task('clear_js', function(cb) {
-    return del(["assets/js/caffeine-theme.min.js"], cb)
+gulp.task("server", function() {
+    browserSync.init(null, {
+        proxy: "http://127.0.0.1:" + PORT.GHOST,
+        files: ["assets/**/*.*"],
+        reloadDelay: 300,
+        port: PORT.BROWSERSYNC
+    });
 });
 
-gulp.task('default',function() {
-    gulp.start(['css','js']);
+gulp.task("build", ["css", "js"]);
+
+gulp.task("default", function() {
+    gulp.start(["build", "server"]);
+    gulp.watch('/assets/css/caffeine-theme.css', ["css"]);
+    gulp.watch(src.js.main, ["js"]);
+    gulp.watch(src.js.fonts, ["js"]);
+    return gulp.watch(src.js.vendor, ["js"]);
 });
