@@ -1,0 +1,15 @@
+{{!< default}}
+{{> material-cover}}
+<div class="page-template page-tag container-wrapper">
+    <div class="tag-header container-wrapper">
+        <div class="tags">
+            <a href="{{tag.url}}">{{tag.name}}</a>
+        </div>
+    </div>
+    <ol class="posts">
+        {{#foreach posts}}
+            {{> post-list-item}}
+        {{/foreach}}
+    </ol>
+    {{pagination}}
+</div>

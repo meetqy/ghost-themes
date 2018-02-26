@@ -1,0 +1,21 @@
+<li class="card">
+    <div class="card-container">
+        <div class="card-body">
+            <a href="{{url}}" title="link to {{{title}}}">
+                <div class="material-cover {{#if feature_image}}" style="background-image: url({{img_url feature_image}}){{else}}no-cover{{/if}}"></div>
+                <div class="card-content">
+                    <h2>{{{title}}}</h2>
+                    <p class="description">{{excerpt}}&hellip;</p>
+                </div>
+            </a>
+        </div>
+        <div class="card-footer">
+             <div class="meta">
+                <time datetime="{{date published_at format="YYYY-MM-DD"}}">{{date published_at format="YYYY-MM-DD"}}</time>
+                <span class="tags">{{tags prefix="on " separator=" "}}</span>
+                - <a href="{{url}}#disqus_thread">Comments</a>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+</li>

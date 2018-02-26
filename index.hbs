@@ -1,0 +1,10 @@
+{{!< default}}
+{{> material-cover}}
+<div class="page-template page-index container-wrapper">
+    <ol class="posts">
+        {{#foreach posts}}
+         {{> post-list-item }}
+        {{/foreach}}
+    </ol>
+</div>
+{{pagination}}

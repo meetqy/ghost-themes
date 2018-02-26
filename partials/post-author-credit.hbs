@@ -1,0 +1,22 @@
+{{#author}}
+    <div class='author-credit'>
+        <figure class="author-image">
+            <a class="img" href="{{url}}">
+                {{#if profile_image}}
+                    <img src="{{img_url profile_image}}" alt="{{name}}'s picture" class="avatar rounded" />
+                {{else}}
+                    <img src="{{asset "/img/user-image.jpg"}}" class="avatar rounded" />
+                {{/if}}
+            </a>
+        </figure>
+
+        <div class="author-info">
+            <h4><a href="{{url}}" class='author-name'>{{name}}</a></h4>
+            {{#if bio}}
+                <p>{{bio}}</p>
+            {{else}}
+                <p>阅读<a href="{{url}}">更多的文章</a>。</p>
+            {{/if}}
+        </div>
+    </div>
+{{/author}}

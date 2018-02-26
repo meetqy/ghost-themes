@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>404 Page not found</title>
+        {{ghost_head}}
+        {{> meta}}
+        <link rel="stylesheet" type="text/css" href="{{asset "css/caffeine-theme.min.css"}}" />
+        {{> head-css}}
+    </head>
+  <body class="page-error">
+    <article>
+        <section>
+            <div class="error-body">
+                <h1>
+                    <strong>404</strong>页面
+                </h1>
+                <hr class="divider short">
+                <h2>
+                    您正在查找的页面已被移动，删除或不存在。点击 <a href="/">这里 </a> 或者点击下面的按钮返回首页
+                </h2>
+                <div class="call-to-action-container">
+                    <nav class="navigation left">
+                        <ul class="links">
+                            <li class="nav-blog expanded">
+                                <a href="/" title="{{meta_title}}">返回首页</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </section>
+    </article>
+    {{ghost_foot}}
+    <script type="text/javascript" src="{{asset "js/caffeine-theme.min.js"}}"></script>
+    {{> google-analytics}}
+  </body>
+</html>
