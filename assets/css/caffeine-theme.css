@@ -5195,7 +5195,8 @@ code[class*=language-], pre[class*=language-] {
     tab-size: 4;
     -webkit-hyphens: none;
     -ms-hyphens: none;
-    hyphens: none
+    hyphens: none;
+    font-size: 16px;
 }
 
 pre[class*=language-] {
