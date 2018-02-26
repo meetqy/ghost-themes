@@ -1,49 +1,58 @@
 {
-  "name": "meetqy-themes",
-  "description": "Material Design Inspired theme for Ghost",
-  "homepage": "https://github.com/meetqy/meetqy-themes",
-  "version": "3.0.5",
-  "author": {
-    "name": "meetqy",
-    "email": "meetqy@qq.com",
-    "url": "https://github.com/meetqy"
-  },
-  "config": {
-    "posts_per_page": 6
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/meetqy/meetqy-themes"
-  },
-  "scripts": {
-    "start": "npm install && gulp",
-    "test": "gulp build",
-    "postinstall": "bower install"
-  },
-  "bugs": {
-    "url": "https://github.com/meetqy/meetqy-themes/issues"
-  },
-  "keywords": [
-    "elegant",
-    "ghost",
-    "minimal",
-    "theme",
-    "blog",
-    "caffeine",
-    "material",
-    "design",
-    "ghost.org"
-  ],
-  "engines": {
-    "node": "^4.2.0 || ^6.10.0"
-  },
-  "license": "MIT",
-  "dependencies": {
-    "del": "^3.0.0",
-    "gulp": "^3.9.1",
-    "gulp-clean-css": "^3.9.2",
-    "gulp-concat": "^2.6.1",
-    "gulp-livereload": "^3.8.1",
-    "gulp-uglify": "^3.0.0"
-  }
+    "name": "meetqy-themes",
+    "description": "Material Design Inspired theme for Ghost",
+    "homepage": "https://github.com/meetqy/meetqy-themes",
+    "version": "3.0.5",
+    "author": {
+        "name": "meetqy",
+        "email": "meetqy@qq.com",
+        "url": "https://github.com/meetqy/"
+    },
+    "config": {
+        "posts_per_page": 6
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/meetqy/meetqy-themes"
+    },
+    "scripts": {
+        "start": "npm install && gulp",
+        "test": "gulp build",
+        "postinstall": "bower install"
+    },
+    "bugs": {
+        "url": "https://github.com/meetqy/meetqy-themes/issues"
+    },
+    "keywords": [
+        "elegant",
+        "ghost",
+        "minimal",
+        "theme",
+        "blog",
+        "caffeine",
+        "material",
+        "design",
+        "ghost.org"
+    ],
+    "devDependencies": {
+        "browser-sync": "2.18.12",
+        "coffee-script": "1.12.6",
+        "gulp": "3.9.1",
+        "gulp-add-src": "0.2.0",
+        "gulp-autoprefixer": "4.0.0",
+        "gulp-changed": "3.1.0",
+        "gulp-concat": "2.6.1",
+        "gulp-cssmin": "0.2.0",
+        "gulp-header": "1.8.8",
+        "gulp-minify-css": "1.2.4",
+        "gulp-sass": "3.1.0",
+        "gulp-strip-css-comments": "1.2.0",
+        "gulp-uglify": "3.0.0",
+        "gulp-util": "3.0.8",
+        "underscore.string": "3.3.4"
+    },
+    "engines": {
+        "node": "^4.2.0 || ^6.10.0"
+    },
+    "license": "MIT"
 }
