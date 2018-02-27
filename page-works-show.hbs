@@ -1,0 +1,40 @@
+{{!< default}}
+
+{{#post}}
+    <style>
+        @media (max-width:900px) {
+            .page-works-show .post-container>div{display: none}
+            .page-works-show .post-container>h1{display: block!important;}
+        }
+        .works-show-tags{text-align: center;}
+        .works-show-tags a {position: relative;display: inline-block;line-height: 45px;padding: 0 20px;margin-left: 15px;background-color: rgba(86,129,122,.7);color: #f4f4f4;border-radius: 4px;}
+        .works-show-tags a:hover{background-color:rgba(86,129,122,1)}
+        .works-show-tags .tag:before{content: ' ';width: 15px;height: 15px;position: absolute;right: -2px;top: -2px;border-radius: 15px;background-color: #fff}
+        .works-show-active:before{background: #7ca8a0!important;top: 15px!important;right: 6px!important;box-shadow: 1px 1px 1px rgba(0,0,0,0.5);}
+        .works-show-active{background: #7ca8a0!important;}
+    </style>
+    <article class="page-works-show {{post_class}}">
+        {{> material-cover}}
+        <div class="profile-container animated fade-in">
+            <div class="post-card animated">
+                <div class="post-container">
+                    <div>
+                        {{#if tags}}
+                            <nav  class="works-show-tags">
+                                {{#foreach tags}}
+                                    {{#if @index}}
+                                        <a href="javascript:;" title="{{name}}" class="tag tag-{{id}} {{slug}}">{{name}} <span>（20）</span></a>
+                                    {{else}}
+                                        <a href="javascript:;" title="{{name}}" class="works-show-active tag tag-{{id}} {{slug}}">{{name}} <span>（20）</span></a>
+                                    {{/if}}
+                                {{/foreach}}
+                            </nav>
+                        {{/if}}
+                    </div>
+
+                    <h1 style="display: none;text-align: center">请在PC端查看！</h1>
+                </div>
+            </div>
+        </div>
+    </article>
+{{/post}}
