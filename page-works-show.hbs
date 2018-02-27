@@ -25,15 +25,36 @@
                             <nav  class="works-show-tags">
                                 {{#foreach tags}}
                                     {{#if @index}}
-                                        <a href="javascript:;" title="{{name}}" class="tag tag-{{id}} {{slug}}">{{name}} <span>（99+）</span></a>
+                                        <a href="javascript:;" title="{{name}}" class="{{slug}} tag tag-{{id}}">{{name}} <span>（99+）</span></a>
                                     {{else}}
-                                        <a href="javascript:;" title="{{name}}" class="works-show-active tag tag-{{id}} {{slug}}">{{name}} <span>（99+）</span></a>
+                                        <a href="javascript:;" title="{{name}}" class="{{slug}} tag tag-{{id}} works-show-active">{{name}} <span>（99+）</span></a>
                                     {{/if}}
                                 {{/foreach}}
                             </nav>
                         {{/if}}
+                        {{#get "posts" filter="tags:javascript"}}
+                            <!--<dl>-->
+                                <!--<dt>-->
+                                    <!--<div class="box-3d">-->
+                                        <!--<div class="box-3d-content" style="transform: translateZ(-85px) rotateY(0deg) rotateX(0deg);">-->
+                                            <!--<img src="https://att.miaov.com/pic/000/016/47">-->
+                                            <!--<img src="https://att.miaov.com/pic/000/016/47">-->
+                                            <!--<img src="https://att.miaov.com/pic/000/016/47">-->
+                                            <!--<img src="https://att.miaov.com/pic/000/016/47">-->
+                                            <!--<img src="https://att.miaov.com/pic/000/016/47">-->
+                                        <!--</div>-->
+                                    <!--</div>-->
+                                <!--</dt>-->
+                                <!--<dd>-->
+                                    <!--<p>{{title}}</p>-->
+                                    <!--<ul>-->
+                                        <!--<li class="talk">8</li>-->
+                                        <!--<li class="praise">3078</li>-->
+                                    <!--</ul>-->
+                                <!--</dd>-->
+                            <!--</dl>-->
+                        {{/get}}
                     </div>
-
                     <h1 style="display: none;text-align: center">请在PC端查看！</h1>
                 </div>
             </div>
