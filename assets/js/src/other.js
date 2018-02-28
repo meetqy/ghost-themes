@@ -14,11 +14,9 @@
                 for (var i = 0, len = posts.length; i < len; i++) {
                     index++;
                     dl_str += splice_html(posts[i]);
-                    if (index % 4 == 0 || (len < 4 && index == len)) {
-                        li_str += '<li class="clear">' + dl_str + '</li>';
-                    }
                 }
-
+                
+                li_str += '<li class="clear">' + dl_str + '</li>';
                 $('#content-box').append('<ul class="show-post-box '+tag+'-ul">' + li_str + '</ul>');
                 MouseDirection('.box-3d');
                 var nav_a = $('.works-show-tags a')[0];
@@ -39,7 +37,7 @@
 	            <dt>\
 	                <div class="box-3d" >\
 	                    <div class="box-3d-content" style="transform: translateZ(-85px) rotateY(0deg) rotateX(0deg);">\
-	                        <img src="https://meetqy.cn/content/images/2018/02/QQ20180224-234657@2x-1.png">\
+	                        <img src='+posts.feature_image+'>\
 	                        <img src="https://meetqy.cn/content/images/2018/02/QQ20180224-234657@2x-1.png">\
 	                       	<img src="https://meetqy.cn/content/images/2018/02/QQ20180224-234657@2x-1.png">\
 	                        <img src="https://meetqy.cn/content/images/2018/02/QQ20180224-234657@2x-1.png">\
