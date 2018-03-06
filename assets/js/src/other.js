@@ -6,6 +6,7 @@
 
         $.each(aArr,function (index,s) {
         	var tag = s.className.split(' ')[0];
+        	
             $.get(ghost.url.api('posts', {filter: 'tags:' + tag + ''})).done(function (data) {
                 var posts = data.posts;
                 var index = 0;		// li换行使用
@@ -25,7 +26,7 @@
                 if(ul_box.className.indexOf('block')<=-1){
                		$(ul_box).addClass('block');
                 }
-                
+            
             }).fail(function (err) {
                 console.log(err);
             });
@@ -33,22 +34,22 @@
 
         // 拼接html
         function splice_html(posts) {
-            var str = '<dl>\
+        	var feature_image = posts.feature_image || '/assets/img/icons/favicon/favicon-170x170.png';
+            var str = '<dl><a href='+posts.url+' title='+posts.title+' target="_blank">\
 	            <dt>\
 	                <div class="box-3d" >\
 	                    <div class="box-3d-content" style="transform: translateZ(-85px) rotateY(0deg) rotateX(0deg);">\
-	                        <img src='+posts.feature_image+'>\
-	                        <img src="https://meetqy.cn/content/images/2018/02/QQ20180224-234657@2x-1.png">\
-	                       	<img src="https://meetqy.cn/content/images/2018/02/QQ20180224-234657@2x-1.png">\
-	                        <img src="https://meetqy.cn/content/images/2018/02/QQ20180224-234657@2x-1.png">\
-	                        <img src="https://meetqy.cn/content/images/2018/02/QQ20180224-234657@2x-1.png">\
+	                        <img src='+feature_image+'>\
+	                        <img src='+feature_image+'>\
+	                       	<img src='+feature_image+'>\
+	                        <img src='+feature_image+'>\
+	                        <img src='+feature_image+'>\
 	                    </div>\
 	                </div>\
-	            </dt>\
+	            </dt></a>\
 	            <dd>\
-	                <p>' + posts.title + '</p>\
-	                <ul>\
-	                </ul>\
+	                <p><a href='+posts.url+' title='+posts.title+' target="_blank">' + posts.title + '</a></p>\
+	               	<p style="text-align:right"># <a href="'+posts.url+'#SOHUCS"  target="_blank">查看评论</a></p>\
 	            </dd>\
 	        </dl>';
             return str;
