@@ -1,5 +1,5 @@
 (function($) {
-    // 作品展示
+	// 作品展示
     function page_works_show() {
         if (window.location.pathname != '/works-show/') return false;
         var aArr = $('.works-show-tags a');
@@ -106,6 +106,28 @@
 	    };
     }
 
+    // 代码显示行号
+    function showCodeNum(){
+    	var $pres = $('pre');
+    	if(!$pres)  return;
+    	for(var i = 0,len = $pres.length;i<len;i++){
+    		var $pre = $pres.eq(i);
+    		var countLen =$pre.find('code').html().split('\n').length;
+    		var j = 1;
+    		var liStr = '';
+    		while(j < countLen){
+    			liStr += '<li>'+j+'</li>'
+    			j++;
+    		}
+    		$pre.append('<ul>'+liStr+'</ul>');
+    	}
+    }
+
+
+
+    showCodeNum();
     page_works_show();
 })($)
+
+
 

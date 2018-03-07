@@ -449,11 +449,29 @@ li > code {
 }
 
 pre {
-    padding: 16px 2.5%;
+    padding: 16px 2.5% 16px 5%;
     margin-bottom: 20px;
     line-height: 20px;
     border: 1px solid #d9d9d9;
-    border-radius: 3px
+    border-radius: 3px;
+    position: relative;
+}
+
+pre > ul{
+    position: absolute;
+    left: 0;
+    width: 50px;
+    top: 17px;
+    margin: 0 20px 0 0;
+    padding: 0;
+    text-align: center;
+    list-style-type: none!important;
+}
+pre > ul > li{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    line-height: 1.5;
 }
 
 pre > code {
@@ -4644,9 +4662,9 @@ body.page-browser-compatibility .error-body {
 }
 
 
-.post-content pre {
-    width: 95%
-}
+/*.post-content pre {*/
+    /*width: 92%*/
+/*}*/
 
 .post-content a {
     -webkit-transition: all .5s;
@@ -5236,7 +5254,7 @@ code[class*=language-], pre[class*=language-] {
 }
 
 pre[class*=language-] {
-    /*padding: 1em;*/
+    padding-left: 15%;
     margin: .5em 0;
     overflow: auto;
     border-radius: .3em
