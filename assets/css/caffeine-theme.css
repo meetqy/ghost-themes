@@ -4661,6 +4661,15 @@ body.page-browser-compatibility .error-body {
     display: block
 }
 
+.post-content h1,.post-content h2,.post-content h3{
+    font-weight: bold;
+    padding-bottom: 10px;
+    color: #e36c09;
+    border-bottom: 1px dashed #4c4c4c;
+}
+.post-content h4,.post-content h5,.post-content h6{
+    font-weight: bold;
+}
 
 /*.post-content pre {*/
     /*width: 92%*/
@@ -4854,6 +4863,8 @@ body.page-browser-compatibility .error-body {
     .post .author-credit .author-info {
         width: 65%
     }
+
+    pre{padding-left: 15%}
 
     .post-card, .post-related {
         margin: 0 20px
@@ -5254,7 +5265,6 @@ code[class*=language-], pre[class*=language-] {
 }
 
 pre[class*=language-] {
-    padding-left: 15%;
     margin: .5em 0;
     overflow: auto;
     border-radius: .3em
