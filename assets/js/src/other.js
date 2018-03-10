@@ -35,7 +35,7 @@
         // 拼接html
         function splice_html(posts) {
         	var feature_image = posts.feature_image || '/assets/img/icons/favicon/favicon-170x170.png';
-            var str = '<dl><a href='+posts.url+' title='+posts.title+' target="_blank">\
+            var str = '<dl><a href='+posts.url+' title='+posts.title+'>\
 	            <dt>\
 	                <div class="box-3d" >\
 	                    <div class="box-3d-content" style="transform: translateZ(-85px) rotateY(0deg) rotateX(0deg);">\
