@@ -4946,7 +4946,8 @@ body.page-browser-compatibility .error-body {
 
     .blog-header h1 {
         margin-bottom: 5px;
-        font-size: 2rem
+        font-size: 2rem;
+        margin-top: 30px;
     }
 
     .posts {
@@ -4954,7 +4955,9 @@ body.page-browser-compatibility .error-body {
     }
 
     .post .material-cover {
-        margin-bottom: 0
+        margin-bottom: 0;
+        height: 150px;
+        background-size: cover!important;
     }
 
     .post .author-credit .author-image {

@@ -123,11 +123,7 @@
     	}
     }
 
-
-
     showCodeNum();
     page_works_show();
 })($)
-
-
 
