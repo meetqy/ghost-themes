@@ -14,6 +14,8 @@
 * 增加mip(partials/headscript.hbs)
 * 移动端增加百度熊掌号关注(/post.hbs)
 
+***
+
 2018-03-07
 * 优化文章详情页面显示代码行号，复制时不会复制到行号(/assets/js/src/other.js)
 * 文章内容h标签优化
