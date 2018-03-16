@@ -4603,6 +4603,7 @@ body.page-browser-compatibility .error-body {
 }
 
 .post-card {
+    position: relative;
     max-width: 900px;
     background: #fff;
     margin: 0 auto;
@@ -4617,8 +4618,8 @@ body.page-browser-compatibility .error-body {
 }
 
 .post .author-credit {
-    border-top: 1px dashed #56817A;
-    padding: 30px 0 20px 10px;
+    /*border-top: 1px dashed #56817A;*/
+    padding: 30px 0 10px 10px;
     /*margin-top: 40px*/
 }
 
@@ -4851,12 +4852,29 @@ body.page-browser-compatibility .error-body {
     }
 }
 
+/*github 右上角 fork-me*/
+#forkme-github{position:absolute;top:0;right:0;display:inline-block}
+#forkme-github img{z-index:99;max-width: none;margin: 0!important;}
+
+/*gitee box 挂件*/
+.ui.segment.osc_git_box{box-shadow: 1px 1px 20px rgba(0,0,0,.2);border-radius: 15px;overflow: hidden;}
+.osc_git_box .osc_git_title h3{border-bottom:0;}
+.git_left_div img{margin:0!important;}
+.pro_name a{color: #4183c4;}
+.osc_git_title{background-color: #fbfbfb!important;}
+.osc_git_box{background-color: #fbfbfb;}
+.osc_git_box{border-color: #e3e9ed;}
+.osc_git_info{color: #000333;}
+.osc_git_main a{color: #9d9d9d;}
+
 @media all and (max-width: 700px) {
     .container-wrapper {
         max-width: 100%
     }
 
     #cambrian{display: block!important;}
+    box-shadow: 1px 1px 20px rgba(0,0,0,.2);border-radius: 15px;overflow: hidden;
+    #forkme-github{display: none!important;}
 
     .card {
         width: 100%
