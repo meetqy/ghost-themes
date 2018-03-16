@@ -4871,8 +4871,6 @@ body.page-browser-compatibility .error-body {
     .container-wrapper {
         max-width: 100%
     }
-
-    #cambrian{display: block!important;}
     box-shadow: 1px 1px 20px rgba(0,0,0,.2);border-radius: 15px;overflow: hidden;
     #forkme-github{display: none!important;}
 
@@ -4886,6 +4884,9 @@ body.page-browser-compatibility .error-body {
 }
 
 @media all and (max-width: 600px) {
+
+    #SOHUCS,.ui.segment.osc_git_box,.post .author-credit,#forkme-github{display: none;}
+
     .post .author-credit .author-info {
         width: 65%
     }
