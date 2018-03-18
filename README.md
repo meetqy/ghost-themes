@@ -10,6 +10,10 @@
 
 ### 最近更新
 
+2018-03-17
+* 优化百度mip(amp.hbs)
+* 访问地址：链接后面加上/amp
+
 2018-03-15
 * 增加mip(partials/headscript.hbs)
 * 移动端增加百度熊掌号关注(/post.hbs)
