@@ -1,6 +1,10 @@
 # ghost博客主题
 根据[caffeine-theme](https://github.com/kelyvin/caffeine-theme)修改而来。
 
+### 预览图
+
+![15217092335ab370b148a8a](https://www.meetqy.com/content/images/2018/03/15217092335ab370b148a8a.png)
+
 ### 主要修改内容
 * 处理页面国内加载慢（可能原开发者是国外的原因）
 * 简化文件打包(gulp)
