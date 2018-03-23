@@ -461,11 +461,15 @@ pre > ul{
     position: absolute;
     left: 0;
     width: 50px;
-    top: 17px;
-    margin: 0 20px 0 0;
-    padding: 0;
+    height: 100%;
+    top: 0;
+    margin: 0;
     text-align: center;
     list-style-type: none!important;
+    box-sizing: border-box;
+    padding: 17px 0 0 0;
+    border-right: 1px solid #919191;
+    color: rgba(125,126,122,1);
 }
 pre > ul > li{
     margin: 0;
@@ -4679,7 +4683,7 @@ body.page-browser-compatibility .error-body {
 }
 
 /*.post-content pre {*/
-    /*width: 92%*/
+/*width: 92%*/
 /*}*/
 
 .post-content a {
@@ -4695,10 +4699,6 @@ body.page-browser-compatibility .error-body {
     width: 100%;
     height: 0;
     content: ""
-}
-
-.post-content a:hover, .post-content a:visited {
-    color: #999
 }
 
 .post-content .author img {
@@ -5296,8 +5296,10 @@ code[class*=language-], pre[class*=language-] {
 
 pre[class*=language-] {
     margin: .5em 0;
-    overflow: auto;
-    border-radius: .3em
+    overflow-y: hidden;
+    border-radius: .3em;
+    box-sizing: border-box;
+    padding-left: 60px;
 }
 
 :not(pre) > code[class*=language-], pre[class*=language-] {
@@ -5322,7 +5324,7 @@ code[class*=language-]  li{
 }
 
 /*code[class*=language-]  li:nth-child(2n-1){*/
-    /*background: #f6f6f6;*/
+/*background: #f6f6f6;*/
 /*}*/
 
 .token.cdata, .token.comment, .token.doctype, .token.prolog {
