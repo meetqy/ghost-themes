@@ -13,10 +13,11 @@
 * 增加代码显示行号
 * 增加畅言评论系统
 * 将mip,amp集合到amp.hbs文件（百度熊掌号直接提交pc页面地址+amp/）
+* 增加设置并显示友情链接功能
 
 ### 使用
 
-* 设置显示友情链接：进入后台管理“code injection”设置ghost_foot。
+* 设置并显示友情链接：进入后台管理“code injection”设置ghost_foot。
 ![2](https://www.meetqy.com/content/images/2018/03/2.png)
 预览图：
 ![1](https://www.meetqy.com/content/images/2018/03/1.png)
