@@ -18,6 +18,8 @@
 
 * 设置显示友情链接：进入后台管理“code injection”设置ghost_foot。
 ![2](https://www.meetqy.com/content/images/2018/03/2.png)
+预览图：
+![1](https://www.meetqy.com/content/images/2018/03/1.png)
 
 * 增加作品展示页面：在后台管理界面新增一个独立页面。页面链接:你的网站地址 + /works-show/，页面标题随便取。
 ![QQ--20180322171037](https://www.meetqy.com/content/images/2018/03/QQ--20180322171037.png)
