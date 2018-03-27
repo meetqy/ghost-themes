@@ -449,7 +449,7 @@ li > code {
 }
 
 pre {
-    padding: 16px 2.5% 16px 5%;
+    padding: 16px 2.5% 16px 60px;
     margin-bottom: 20px;
     line-height: 20px;
     border: 1px solid #d9d9d9;
@@ -4891,7 +4891,7 @@ body.page-browser-compatibility .error-body {
         width: 65%
     }
 
-    pre{padding-left: 15%}
+    pre{padding-left: 60px}
 
     .post-card, .post-related {
         margin: 0 20px
