@@ -1,5 +1,5 @@
 # ghost博客主题
-预览地址[meetqy-themes](https://www.meetqy.com)
+预览地址：[meetqy-themes](https://www.meetqy.com)
 
 根据[caffeine-theme](https://github.com/kelyvin/caffeine-theme)修改而来。
 
