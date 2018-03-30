@@ -27,8 +27,18 @@
              <div class="post-content">
                 {{content}}
             </div>
-            {{> post-author-credit}}
-                    
+
+            <p class="tags" style="display: inline-block;width: 98%;margin-top: 25px;padding: 10px;box-shadow: 1px 6px 10px rgba(0,0,0,.3);">
+                标签云：
+                {{#get "tags"}}
+                    {{#foreach tags}}
+                        <a href="/tag/{{slug}}">{{name}}</a>
+                        <span> | </span>
+                    {{/foreach}}
+                {{/get}}
+            </p>
+
+
             {{> changyan-comment}}
         </div>
     </div>
