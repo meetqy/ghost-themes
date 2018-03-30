@@ -1,6 +1,8 @@
 # ghost博客主题
 根据[caffeine-theme](https://github.com/kelyvin/caffeine-theme)修改而来。
 
+### 预览地址：[meetqy-themes](https://www.meetqy.com)
+
 ### 预览图
 
 ![15217092335ab370b148a8a](https://www.meetqy.com/content/images/2018/03/15217092335ab370b148a8a.png)
